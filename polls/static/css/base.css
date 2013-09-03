@@ -108,6 +108,9 @@ a:focus {
 	border-bottom:  30px solid #79C3D2;
 }
 
+#choices li:hover { background-color: #4398B5; }
+#choices li:hover:after { border-left: 30px solid #4398B5; }
+
 #choices li a {
 	display: block;
 	padding: 20px 0;
@@ -115,3 +118,58 @@ a:focus {
 	font: normal 1.1em/1em 'ubuntu', sans-serif;
 	text-decoration: none;
 }
+
+/*
+.circles {
+	position:relative;
+	-webkit-appearance: none;
+	width:40px;
+	height:40px;
+	border-radius: 100px;
+	margin:8px;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.circles:checked {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.circles:after {
+	position:absolute;
+	left:8px;
+	top:9px;
+	content:"";
+	background:url('http://static.tumblr.com/upanoab/0hOmmcbuh/tick-sprite.png');
+	width:22px;
+	height:22px;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.circles:checked:after {
+	position:absolute;
+	left:8px;
+	top:9px;
+	content:"";
+	background:url('http://static.tumblr.com/upanoab/0hOmmcbuh/tick-sprite.png');
+	background-position:-23px;
+	width:22px;
+	height:22px;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+*/
