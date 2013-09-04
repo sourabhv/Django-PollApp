@@ -1,6 +1,7 @@
 # Setup the Django environment so we can access our models
 import os
 import datetime
+from random import randint
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PollApp.settings")
 
 from polls.models import *
@@ -26,9 +27,9 @@ def main():
 		p.save()
 		print 'Added poll - %s' % poll_questions[i]
 		for j in range(len(poll_choices[i])):
-			c = Choice(poll=p, choice_text=poll_choices[i][j], votes=0)
+			c = Choice(poll=p, choice_text=poll_choices[i][j], votes=randint(0,20))
 			c.save()
-			print '\tAdded choice - %s' % poll_choices[i][j]
+			print '  Added choice - %s' % poll_choices[i][j]
 
 
 if __name__ == '__main__':
