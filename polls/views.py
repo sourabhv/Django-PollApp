@@ -33,7 +33,6 @@ def vote(request, poll_id):
 	else:
 		return HttpResponseRedirect(reverse('polls:index'))
 
-
 # def vote(request, poll_id, choice_id):
 # 	poll = get_object_or_404(Poll, pk=poll_id)
 # 	choice = get_object_or_404(Choice, pk=choice_id)

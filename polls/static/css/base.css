@@ -32,6 +32,11 @@ header {
 	background-color: black;
 }
 
+header a {
+	text-decoration: none;
+	color: white;
+}
+
 body * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -115,6 +120,10 @@ a:focus {
 	height: 20px;
 }
 
+#choice-form input[type=radio]:checked {
+	background-color: #45808C;
+}
+
 #choice-form input[type=radio]:checked:after {
 	background-position: -23px;
 }
@@ -139,6 +148,35 @@ label {
 	background-color: #5192A0;
 	border: 2px solid #447782;
 	color: white;
+}
+
+#result {
+	margin-top: 40px;
+	padding: 20px 30px;
+	background-color: black;
+	box-shadow: 0 0 0 10px #B3DFE8;
+	color: white;
+}
+
+#result > div {
+	position: relative;
+	margin: 5px 0;
+	padding: 10px;
+	font: normal 1em 'ubuntu', sans-serif;
+	border: 2px solid #79C3D2;
+	height: 42px;
+}
+
+.meter {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 0;
+	background-color: rgba(121, 195, 210, .3)
+}
+
+#result span {
+	float: right;
 }
 
 /*#choices {

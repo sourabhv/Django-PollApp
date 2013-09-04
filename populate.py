@@ -14,7 +14,8 @@ poll_questions = ['What is your favorite type of music',
 				  'Do you trust atoms']
 
 poll_choices = [['Classical', 'Pop', 'Rock', 'Rap', 'Hip-hop', 'Metal', 'Country', 'Who cares?'],
-				['The Simpsons', 'Spongebob Squarepants', 'Family Guy', 'South Park', 'Avatar - The last Airbender', 'ALL of \'em!', 'Some other cartoon', 'None, cartoons are for DORKS!'],
+				['The Simpsons', 'Spongebob Squarepants', 'Family Guy', 'South Park', 'Avatar - The Last Airbender',
+					'All of \'em!', 'Some other cartoon', 'None! cartoons are for DORKS!'],
 				['Na! Its too boring', 'Eh, its ok ...', 'Hell Yeah! Its so awesome and easy'],
 				['Yes', 'No', 'Maybe'],
 				['Sure, what\'s not to trust?', 'No way! They make up everything.']]

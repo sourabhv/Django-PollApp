@@ -6,4 +6,20 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% endblock %}
 
-{% block header %}<h1>Polls: {{poll.question}}?</h1>{% endblock %}
+{% block header %}<h1><a href="{% url 'polls:index' %}">Polls: {{poll.question}}?</a></h1>{% endblock %}
+
+{% block content %}
+	{% if poll %}
+		<div id="result">
+			{% for choice in poll.choice_set.all %}
+				<div data-votes="{{ choice.votes }}">
+					<div class="meter"></div>
+					{{ choice.choice_text }}<span>{{choice.votes}} Votes</span>
+				</div>
+			{% endfor %}
+		</div>
+	<script src="{{ STATIC_URL }}js/result.js"></script>
+	{% else %}
+		<p id="warning">An error occoured, please try again later.</p>
+	{% endif %}
+{% endblock %}
