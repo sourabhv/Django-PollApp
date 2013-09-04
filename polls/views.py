@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from polls.models import *
 
 def index(request):
-	latest_polls = Poll.objects.order_by('-pubdate')[:5]
+	latest_polls = Poll.objects.order_by('-pubdate')[:10]
 	for i in range(len(latest_polls)):
 		if latest_polls[i].question[-1] == '?':
 			latest_polls[i].question == latest_polls[i].question[:-1]
@@ -43,4 +43,4 @@ def vote(request, poll_id):
 
 def result(request, poll_id):
 	poll = get_object_or_404(Poll, pk=poll_id)
-	return render(request, 'polls/result.html', {'poll': poll})	
+	return render(request, 'polls/result.html', {'poll': poll})

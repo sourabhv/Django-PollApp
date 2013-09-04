@@ -1,0 +1,9 @@
+{% extends "polls/base.html" %}
+
+{% block title %}{{ poll.question }} | Polls{% endblock %}
+
+{% block head %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block header %}<h1>Polls: {{poll.question}}?</h1>{% endblock %}

@@ -8,10 +8,16 @@
 	src: url('../webfonts/essay.ttf') format('truetype');
 }
 
+::selection {
+	background: #3FC67D;
+}
+::-moz-selection {
+	background: #3FC67D;
+}
+
 * {
 	margin: 0;
 }
-
 
 body {
 	background-color: #79C3D2;
@@ -41,6 +47,12 @@ a:focus {
 	width: 80%;
 	max-width: 700px;
 	margin: 0 auto;
+}
+
+#warning {
+	margin-top: 100px;
+	text-align: center;
+	font: normal 1.2em 'ubuntu', sans-serif;
 }
 
 #polls {
@@ -73,8 +85,63 @@ a:focus {
 	padding: 30px 0;
 }
 
+#choice-form {
+	width: 80%;
+	margin: 20px auto 0;
+}
 
-#choices {
+#choice-form p {
+	margin: 10px 0;
+}
+
+
+#choice-form input[type=radio] {
+	position: relative;
+	-webkit-appearance: none;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 100px;
+}
+
+#choice-form input[type=radio]:after {
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	content: '';
+	background: url('../images/tick.png');
+	width: 20px;
+	height: 20px;
+}
+
+#choice-form input[type=radio]:checked:after {
+	background-position: -23px;
+}
+
+#choice-form input[type=radio]:focus {
+	outline: 0;
+	box-shadow: 0 0 20px white;
+}
+
+label {
+	display: inline-block;
+	margin: 8px 0 0 5px;
+	vertical-align: top;
+}
+
+#choice-form input[type=submit] {
+	padding: 5px 10px;
+	/*float: right;*/
+	margin-left: 40px;
+	border-radius: 3px;
+	font: normal 15px 'ubuntu', sans-serif;
+	background-color: #5192A0;
+	border: 2px solid #447782;
+	color: white;
+}
+
+/*#choices {
 	width: 90%;
 	margin: 0 auto;
 	margin-top: 50px;
@@ -117,59 +184,4 @@ a:focus {
 	color: white;
 	font: normal 1.1em/1em 'ubuntu', sans-serif;
 	text-decoration: none;
-}
-
-/*
-.circles {
-	position:relative;
-	-webkit-appearance: none;
-	width:40px;
-	height:40px;
-	border-radius: 100px;
-	margin:8px;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-
-.circles:checked {
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-
-.circles:after {
-	position:absolute;
-	left:8px;
-	top:9px;
-	content:"";
-	background:url('http://static.tumblr.com/upanoab/0hOmmcbuh/tick-sprite.png');
-	width:22px;
-	height:22px;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-
-.circles:checked:after {
-	position:absolute;
-	left:8px;
-	top:9px;
-	content:"";
-	background:url('http://static.tumblr.com/upanoab/0hOmmcbuh/tick-sprite.png');
-	background-position:-23px;
-	width:22px;
-	height:22px;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-*/
+}*/
