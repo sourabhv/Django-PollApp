@@ -14,7 +14,7 @@
 			{% for choice in poll.choice_set.all %}
 				<div data-votes="{{ choice.votes }}">
 					<div class="meter"></div>
-					{{ choice.choice_text }}<span>{{choice.votes}} Votes</span>
+					{{ choice.choice_text }}<span>{{choice.votes}} Vote{{ choice.votes|pluralize }}</span>
 				</div>
 			{% endfor %}
 		</div>

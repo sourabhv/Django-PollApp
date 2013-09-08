@@ -5,10 +5,11 @@ from django.utils import timezone
 
 class Poll(models.Model):
 	question = models.CharField(max_length=200)
-	pubdate = models.DateTimeField(verbose_name=u'publication date',auto_now_add=True)
+	pubdate = models.DateTimeField(verbose_name=u'publication date', default=timezone.now())
 
 	def wasPublishedRecently(self):
-		return self.pubdate >= timezone.now() - datetime.timedelta(days=1)
+		now = timezone.now()
+		return now - datetime.timedelta(days=1) <= self.pubdate < now
 	wasPublishedRecently.boolean = True
 	wasPublishedRecently.short_description = 'Published recently?'
 	wasPublishedRecently.admin_order_field = 'pubdate'

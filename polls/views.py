@@ -1,15 +1,12 @@
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 
 from polls.models import *
 
 def index(request):
-	latest_polls = Poll.objects.order_by('-pubdate')[:10]
-	for i in range(len(latest_polls)):
-		if latest_polls[i].question[-1] == '?':
-			latest_polls[i].question == latest_polls[i].question[:-1]
-
+	latest_polls = Poll.objects.filter(pubdate__lte=timezone.now()).order_by('-pubdate')[:10]
 	return render(request, 'polls/index.html', {'latest_polls': latest_polls})
 
 def detail(request, poll_id):
