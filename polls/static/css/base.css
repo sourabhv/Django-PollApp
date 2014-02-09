@@ -172,7 +172,7 @@ label {
 	top: 0; left: 0;
 	height: 100%;
 	width: 0;
-	background-color: rgba(121, 195, 210, .3)
+	background-color: rgba(121, 195, 210, .4);
 }
 
 #result span {
